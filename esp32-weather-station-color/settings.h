@@ -85,7 +85,6 @@ bool IS_STYLE_12HR = false;
 #define TFT_DC 15
 #define TFT_CS 33
 #define TFT_LED 13
-//#define TFT_RST 22
 
 //#define HAVE_TOUCHPAD
 #define TOUCH_CS 32

@@ -28,8 +28,10 @@ After installing the libraries, restart the Arduino IDE.
 
 Open the file settings.h in the Arduino IDE and enter your WiFi SSID & password in the fields in the WiFi section: 
 
+```bash
 #define WIFI_SSID "your ssid"
 #define WIFI_PASS "your password"
+```
 
 
 ## Settings OpenWeatherMap
@@ -38,20 +40,25 @@ Account for OpenWeatherMap: To receive later data by the platform OpenWeatherMap
 
 Enter your API key in line 38 of settings.h
 
+```bash
 String OPEN_WEATHER_MAP_APP_ID = "your_api_key";
+```
 
 Your location: Go to https://openweathermap.org/find?q= and search for a location. Go through theresult set and select the entry closest to the actual location you want to display data for. It'll be a URL like https://openweathermap.org/city/2657896. The number at the end is what you assign to the constant below. Enter the number and name of your location in line 45 and 46 of settings.h
 
+```bash
 String OPEN_WEATHER_MAP_LOCATION_ID = "2804279";
 String DISPLAYED_CITY_NAME = "Ziesar";
+```
 
 
 ## Settings Time
 
 Please choose your timezone in line 65 of settings.h
 
+```bash
 #define UTC_OFFSET +1
-
+```
 
 
 ## License

@@ -11,9 +11,11 @@ Simple Codelock / Keypad example for our [AZ-Touch Feather kit](https://www.hwha
 
 [SparkFun Thing Plus - ESP32 WROOM boards](https://www.sparkfun.com/products/15663)
 
-[SparkFun Thing Plus - ESP32 WROOM boards](https://www.sparkfun.com/products/15663)
+[Adafruit HUZZAH ESP8266](https://www.adafruit.com/product/2821) 
 
-[SparkFun Thing Plus - ESP32 WROOM boards](https://www.sparkfun.com/products/15663)
+[Adafruit Feather M0](https://www.adafruit.com/product/2772)
+
+[SparkFun Thing Plus - RP2040](https://www.sparkfun.com/products/17745)
 
 
 

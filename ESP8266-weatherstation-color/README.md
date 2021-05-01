@@ -1,75 +1,55 @@
-
-# ESP8266 Weather Station
-
-based on the work by [Daniel Eichhorn - Thingpulse](https://github.com/ThingPulse/esp8266-weather-station)
-
-This fork is changed for our [AZ-Touch Feather kit](https://www.hwhardsoft.de/english/projects/az-touch-feather/) equipped with [Adafruit HUZZAH ESP8266](https://www.adafruit.com/product/2821) 
-
-![My image](https://user-images.githubusercontent.com/3049858/93122689-3ff27300-f6c7-11ea-8985-9fe069cd710f.jpg)
+# ThingPulse ESP8266 Weather Station Color
 
 
-## Libraries
+[![ThingPulse logo](https://thingpulse.com/assets/ThingPulse-w300.svg)](https://thingpulse.com)
 
-Install the following libraries through Arduino Library Manager
+ESP8266 Weather Station Color using ILI9341 240x320 TFT display
 
-[Mini Grafx by Daniel Eichhorn](https://github.com/ThingPulse/minigrafx)
+## Hardware Requirements
 
-[Json Streaming Parser by Daniel Eichhorn](https://github.com/squix78/json-streaming-parser/blob/master/library.properties)
+The code in this project supports an ILI9341 240x320 TFT display with code running on an ESP8266. To get you up and running in no time we created a kit which contains all the necessary parts including a custom PCB to connect display and WiFi chip:
+[https://thingpulse.com/product/esp8266-wifi-color-display-kit-2-4/](https://thingpulse.com/product/esp8266-wifi-color-display-kit-2-4/)
 
-[simpleDSTadjust by neptune2](https://github.com/neptune2/simpleDSTadjust)
+Buy the kit from us to support future development of this application. Thank you!
 
-[ESP8266 WeatherStation by Daniel Eichhorn](https://github.com/ThingPulse/esp8266-weather-station)
+[![ThingPulse ESP8266 Color Display Kit](resources/ESP8266ColorDisplayKit.png)](https://thingpulse.com/product/esp8266-wifi-color-display-kit-2-4/)
 
-You can download the library also directly as ZIP file and uncompress the folder under yourarduinosketchfolder/libraries/   
+## Service level promise
 
-After installing the libraries, restart the Arduino IDE. 
+<table><tr><td><img src="https://thingpulse.com/assets/ThingPulse-open-source-prime.png" width="150">
+</td><td>This is a ThingPulse <em>prime</em> project. See our <a href="https://thingpulse.com/about/open-source-commitment/">open-source commitment declaration</a> for what this means.</td></tr></table>
 
+## Step-by-step tutorial
 
-## Settings WiFi
+A complete step-by-step tutorial/guide is available at [https://docs.thingpulse.com/guides/wifi-color-display-kit/](https://docs.thingpulse.com/guides/wifi-color-display-kit/).
 
-Open the file settings.h in the Arduino IDE and enter your WiFi SSID & password in the fields in the WiFi section: 
+## Licensing, contributions and maintenance
 
-```bash
-#define WIFI_SSID "your ssid"
-#define WIFI_PASS "your password"
-```
+The code in this repository is licensed under [MIT](https://en.wikipedia.org/wiki/MIT_License), a short and simple permissive license with conditions only requiring preservation of copyright and license notices. Thus, you're free to fork the project and use the code for your own projects as long as you keep the copyright notices in place.
 
+ThingPulse is committed to open-source development and will continue to maintain this code. We welcome contributions from the community given they are roughly in line with our [guidelines](CONTRIBUTING.md). However, please understand that we primarily developed this application to be run on our own hardware kit mentioned above. It's the only platform we regularly test the code against. You are of course free to run the code on any hardware you think is compatible but you have to rely on community support should you run into problems. 
 
-## Settings OpenWeatherMap
+ThingPulse runs a support forum for its customers that is better suited to answering user questions than the issues list here.
 
-Account for OpenWeatherMap: To receive later data by the platform OpenWeatherMap you will need an own account. Sign up here to get an API key: https://docs.thingpulse.com/how-tos/openweathermap-key/
+## Wiring
 
-Enter your API key in line 38 of settings.h
+The below wiring diagram is only needed when you do _not_ buy the self-contained kit from ThingPulse but rather assemble the components yourself.
 
-```bash
-String OPEN_WEATHER_MAP_APP_ID = "your_api_key";
-```
+![Wiring](resources/PlaneSpotterWiring.png)
 
-Your location: Go to https://openweathermap.org/find?q= and search for a location. Go through theresult set and select the entry closest to the actual location you want to display data for. It'll be a URL like https://openweathermap.org/city/2657896. The number at the end is what you assign to the constant below. Enter the number and name of your location in line 45 and 46 of settings.h
-
-```bash
-String OPEN_WEATHER_MAP_LOCATION_ID = "2804279";
-String DISPLAYED_CITY_NAME = "Ziesar";
-```
-
-
-## Settings Time
-
-Please choose your timezone in line 65 of settings.h
-
-```bash
-#define UTC_OFFSET +1
-```
-
-
-## License
-
-This library is free software; you can redistribute it and/or
-modify it under the terms of the GNU Lesser General Public
-License as published by the Free Software Foundation; either
-version 2.1 of the License, or (at your option) any later version.
-
-This library is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-Lesser General Public License for more details.
+| Wemos D1 Mini | ILI9341      |
+| ------------- |:-------------:|
+| D4            | T_IRQ         |
+| D6            | T_DO          |
+| D7            | T_DIN         |
+| D3            | T_CS          |
+| D5            | T_CLK         |
+| D6            | SDO           |
+| D8            | LED           |
+| D5            | SCK           |
+| D7            | SDI           |
+| D2            | D/C           |
+| RST           | RESET         |
+| D1            | CS            |
+| GND           | GND           |
+| 3V3           | VCC           |

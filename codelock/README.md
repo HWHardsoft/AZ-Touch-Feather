@@ -1,8 +1,9 @@
 # Codelock Example
 
-Simple Codelock / Keypad example for our [AZ-Touch Feather kit](https://www.hwhardsoft.de/english/projects/az-touch-feather/) equipped with [Adafruit HUZZAH32](https://www.adafruit.com/product/3405) or [SparkFun Thing Plus - ESP32 WROOM boards](https://www.sparkfun.com/products/15663)
+Simple Codelock / Keypad example for our [AZ-Touch Feather kit](https://www.hwhardsoft.de/english/projects/az-touch-feather/) 
 
-![My image](https://user-images.githubusercontent.com/3049858/93122689-3ff27300-f6c7-11ea-8985-9fe069cd710f.jpg)
+![AZ-Touch Feather Codelock](https://user-images.githubusercontent.com/3049858/79955903-b58f4580-847f-11ea-8a44-0ffad80f72f7.jpg)
+
 
 ## compatible Feather boards
 [Adafruit HUZZAH32](https://www.adafruit.com/product/3405)
@@ -14,54 +15,27 @@ Simple Codelock / Keypad example for our [AZ-Touch Feather kit](https://www.hwha
 
 Install the following libraries through Arduino Library Manager
 
-[Mini Grafx by Daniel Eichhorn](https://github.com/ThingPulse/minigrafx)
+[Adafruit GFX Library](https://github.com/adafruit/Adafruit-GFX-Library/archive/master.zip)
 
-[Json Streaming Parser by Daniel Eichhorn](https://github.com/squix78/json-streaming-parser/blob/master/library.properties)
+[Adafruit ILI9341 Library](https://github.com/adafruit/Adafruit_ILI9341)
 
-[simpleDSTadjust by neptune2](https://github.com/neptune2/simpleDSTadjust)
+[Touchscreen by Paul Stoffregen](https://github.com/PaulStoffregen/XPT2046_Touchscreen/)
 
-[ESP32 WeatherStation modified by Zihatec](https://github.com/HWHardsoft/ESP32_Weather_Station)
 
 You can download the library also directly as ZIP file and uncompress the folder under yourarduinosketchfolder/libraries/   
 
 After installing the libraries, restart the Arduino IDE. 
 
 
-## Settings WiFi
+## Settings 
 
-Open the file settings.h in the Arduino IDE and enter your WiFi SSID & password in the fields in the WiFi section: 
-
-```bash
-#define WIFI_SSID "your ssid"
-#define WIFI_PASS "your password"
-```
-
-
-## Settings OpenWeatherMap
-
-Account for OpenWeatherMap: To receive later data by the platform OpenWeatherMap you will need an own account. Sign up here to get an API key: https://docs.thingpulse.com/how-tos/openweathermap-key/
-
-Enter your API key in line 38 of settings.h
+In the source code you can set the code number :: 
 
 ```bash
-String OPEN_WEATHER_MAP_APP_ID = "your_api_key";
+#define codenum 42
 ```
 
-Your location: Go to https://openweathermap.org/find?q= and search for a location. Go through theresult set and select the entry closest to the actual location you want to display data for. It'll be a URL like https://openweathermap.org/city/2657896. The number at the end is what you assign to the constant below. Enter the number and name of your location in line 45 and 46 of settings.h
-
-```bash
-String OPEN_WEATHER_MAP_LOCATION_ID = "2804279";
-String DISPLAYED_CITY_NAME = "Ziesar";
-```
-
-
-## Settings Time
-
-Please choose your timezone in line 65 of settings.h
-
-```bash
-#define UTC_OFFSET +1
-```
+42 is the answer for everything, but you can change this to any number between 0 and 999999.
 
 
 ## License

@@ -32,7 +32,7 @@ const int SLEEP_INTERVAL_SECS = 0;   // Going to Sleep after idle times, set 0 f
 
 // OpenWeatherMap Settings
 // Sign up here to get an API key: https://docs.thingpulse.com/how-tos/openweathermap-key/
-String OPEN_WEATHER_MAP_APP_ID = "2ee4922e652b0c6edf34644109b248a9";
+String OPEN_WEATHER_MAP_APP_ID = "your open weather id";
 /*
 Go to https://openweathermap.org/find?q= and search for a location. Go through the
 result set and select the entry closest to the actual location you want to display 

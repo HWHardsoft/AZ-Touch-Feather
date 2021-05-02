@@ -6,7 +6,7 @@ A collection of different demo sources for Zihatec [AZ-Touch Feather wall mount 
 
 ## Used pins
 
-![My image](https://user-images.githubusercontent.com/3049858/116822653-36e3e280-ab80-11eb-96f6-3615512153ef.png)
+![My image](https://user-images.githubusercontent.com/3049858/116823218-8e378200-ab83-11eb-844d-4d1c4a59f69b.png)
 
 Please note: For HuzzahESP8266 the Beeper is on 5 and the TFT_LED pin is not in use.
 
